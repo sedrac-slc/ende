@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('inquiries', function (Blueprint $table) {
             $table->uuid()->primary();
             $table->string('title',255)->unique();
-            $table->timestamps();
             $table->uuid('created_by')->nullable();
             $table->uuid('updated_by')->nullable();
             $table->timestamps();

@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('options', function (Blueprint $table) {
             $table->uuid()->primary();
-            $table->foreignUuid('question_id')->constrained('questions');
+            $table->foreignUuid('question_id')->constrained('questions','uuid');
             $table->string('name',255)->unique();
-            $table->timestamps();
             $table->uuid('created_by')->nullable();
             $table->uuid('updated_by')->nullable();
+            $table->timestamps();
         });
     }
 
