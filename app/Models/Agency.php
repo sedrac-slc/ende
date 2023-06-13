@@ -13,6 +13,7 @@ class Agency extends Model
     protected $fillable = [
         'uuid',
         'name',
+        'address',
         'created_by',
         'updated_by',
     ];
